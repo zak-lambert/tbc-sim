@@ -22,10 +22,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Tegas/legacy-sim.git"
+    "url": "https://github.com/zak-lambert/tbc-sim.git"
   },
   "author": "Tegas",
-  "homepage": "https://tegas.github.io/legacy-sim/",
+  "homepage": "https://zak-lambert.github.io/tbc-sim/",
   "devDependencies": {
     "gh-pages": "2.1.1"
   },
