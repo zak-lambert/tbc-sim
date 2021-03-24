@@ -1,7 +1,7 @@
 {
   "name": "tbc-sim",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "react": "16.9.0",
     "react-dom": "16.9.0",
@@ -27,7 +27,7 @@
   "author": "Tegas",
   "homepage": "https://zak-lambert.github.io/tbc-sim/",
   "devDependencies": {
-    "gh-pages": "2.1.1"
+    "gh-pages": "^2.1.1"
   },
   "browserslist": {
     "production": [
