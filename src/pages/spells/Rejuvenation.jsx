@@ -11,11 +11,15 @@ class rejuvenation extends Component {
 
   componentWillMount() {
     this.props.initialize({
-      healing: 500,
-      crit: 15,
+      healing: 1117,
+      crit: 10,
+      spirit: 284,
       improvedRejuvenation: true,
+      empoweredRejuvenation: true,
       tranquilSpirit: true,
       giftOfNature: true,
+      treeOfLifeForm: true,
+      treeOfLifeAura: true,
     });
   }
 
@@ -30,6 +34,9 @@ class rejuvenation extends Component {
           talents.amplifyMagic,
           talents.t2Druid8set,
           talents.t3Druid4set,
+          talents.empoweredRejuvenation,
+          talents.treeOfLifeForm,
+          talents.treeOfLifeAura,
         ] }
         formValues={ this.props.formValues }
       />

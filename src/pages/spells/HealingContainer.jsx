@@ -45,6 +45,8 @@ class HealingContainer extends Component {
     const hotCoefficient = spell.hotCoefficient ? (spell.hotCoefficient * lowLevelPenalty) : Math.min(((modifiedRank.duration || 15) / 15), 1) * lowLevelPenalty;
 
     const totalCrit = Math.min(+modifiedCharacter.crit, 100);
+    const totalSpirit = Math.min(+modifiedCharacter.spirit, 1000);
+
     const mana = modifiedRank.mana;
     const castTime = Math.max(modifiedRank.castTime, 1.5);
     const numberOfTicks = modifiedRank.duration / 3.0;
@@ -122,6 +124,11 @@ class HealingContainer extends Component {
           <div className='large-4 columns'>
             <label htmlFor='crit'>Crit %
               <Field name='crit' component='input' type='number' min='0' max='100' />
+            </label>
+          </div>
+          <div className='large-4 columns'>
+            <label htmlFor='spirit'>Spirit
+              <Field name='spirit' component='input' type='number' min='0' max='999' />
             </label>
           </div>
           <div className='large-4 columns' />

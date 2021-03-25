@@ -7,34 +7,38 @@ import * as talents from './talents';
 import * as spells from './spells';
 import '../style.css';
 
-class healingTouch extends Component {
+class lifebloom extends Component {
 
   componentWillMount() {
     this.props.initialize({
-      healing: 500,
-      crit: 15,
-      improvedHealingTouch: true,
+      healing: 1500,
+      crit: 10,
+      int: 500,
+      spirit: 500,
+      improvedRejuvenation: true,
       tranquilSpirit: true,
       giftOfNature: true,
+      empoweredRejuvenation: true,
+      treeOfLifeForm: true,
+      treeOfLifeAura: true,
     });
   }
 
   render() {
     return (
       <HealingContainer
-        spell={ spells.healingTouch }
+        spell={ spells.lifebloom }
         talents={ [
-          talents.improvedHealingTouch,
-          talents.empoweredTouch,
+          talents.improvedRejuvenation,
           talents.giftOfNature,
-          talents.tranquilSpirit,
+          talents.treeOfLifeForm,
+          talents.treeOfLifeAura,
           talents.moonglow,
-          talents.naturesGrace,
           talents.amplifyMagic,
+          talents.t2Druid8set,
           talents.t3Druid4set,
-          talents.t3Druid8set,
-          talents.idolOfHealth,
-          talents.idolOfLongevity,
+          talents.idolOfTheEmeraldQueen,
+          talents.empoweredRejuvenation,
         ] }
         formValues={ this.props.formValues }
       />
@@ -44,7 +48,7 @@ class healingTouch extends Component {
 
 const mapStateToProps = state => {
   return {
-    formValues: getFormValues('healingTouch')(state),
+    formValues: getFormValues('lifebloom')(state),
   };
 };
 
@@ -53,6 +57,6 @@ const mapDispatchToProps = dispatch => ({
   }, dispatch),
 });
 
-healingTouch.propTypes = propTypes;
+lifebloom.propTypes = propTypes;
 
-export default reduxForm({ form: 'healingTouch' })(connect(mapStateToProps, mapDispatchToProps)(healingTouch));
+export default reduxForm({ form: 'lifebloom' })(connect(mapStateToProps, mapDispatchToProps)(lifebloom));

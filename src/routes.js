@@ -8,6 +8,7 @@ import SpellContainer from './pages/spells/SpellContainer';
 import HealingTouch from './pages/spells/HealingTouch';
 import Rejuvenation from './pages/spells/Rejuvenation';
 import Regrowth from './pages/spells/Regrowth';
+import Lifebloom from './pages/spells/Lifebloom';
 import GreaterHeal from './pages/spells/GreaterHeal';
 import FlashHeal from './pages/spells/FlashHeal';
 import Renew from './pages/spells/Renew';
@@ -49,6 +50,7 @@ class Routes extends Component {
                 <Route path="/healing-touch" component={ HealingTouch } />
                 <Route path="/rejuvenation" component={ Rejuvenation } />
                 <Route path="/regrowth" component={ Regrowth } />
+                <Route path="/lifebloom" component={ Lifebloom } />
                 <Route path="/greater-heal" component={ GreaterHeal } />
                 <Route path="/flash-heal" component={ FlashHeal } />
                 <Route path="/renew" component={ Renew } />

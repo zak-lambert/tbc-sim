@@ -10,13 +10,14 @@ export const regrowth = {
   ranks: [
     { 'rank': 1, 'mana': 120, 'level': 12, 'castTime': 2, 'min': 92, 'max': 107, 'hotTick': 98/7, 'duration': 21 },
     { 'rank': 2, 'mana': 205, 'level': 18, 'castTime': 2, 'min': 176, 'max': 201, 'hotTick': 175/7, 'duration': 21 },
-    { 'rank': 3, 'mana': 280, 'level': 24, 'castTime': 2, 'min': 255, 'max': 290, 'hotTick': 259/7, 'duration': 21 },
-    { 'rank': 4, 'mana': 350, 'level': 30, 'castTime': 2, 'min': 335, 'max': 378, 'hotTick': 343/7, 'duration': 21 },
-    { 'rank': 5, 'mana': 420, 'level': 36, 'castTime': 2, 'min': 425, 'max': 478, 'hotTick': 427/7, 'duration': 21 },
-    { 'rank': 6, 'mana': 510, 'level': 42, 'castTime': 2, 'min': 534, 'max': 599, 'hotTick': 546/7, 'duration': 21 },
-    { 'rank': 7, 'mana': 615, 'level': 48, 'castTime': 2, 'min': 672, 'max': 751, 'hotTick': 686/7, 'duration': 21 },
-    { 'rank': 8, 'mana': 740, 'level': 54, 'castTime': 2, 'min': 838, 'max': 935, 'hotTick': 861/7, 'duration': 21 },
-    { 'rank': 9, 'mana': 880, 'level': 60, 'castTime': 2, 'min': 1003, 'max': 1120, 'hotTick': 1064/7, 'duration': 21 },
+    { 'rank': 3, 'mana': 185, 'level': 24, 'castTime': 2, 'min': 240, 'max': 275, 'hotTick': 259/7, 'duration': 21 },
+    { 'rank': 4, 'mana': 230, 'level': 30, 'castTime': 2, 'min': 318, 'max': 362, 'hotTick': 343/7, 'duration': 21 },
+    { 'rank': 5, 'mana': 275, 'level': 36, 'castTime': 2, 'min': 405, 'max': 458, 'hotTick': 427/7, 'duration': 21 },
+    { 'rank': 6, 'mana': 335, 'level': 42, 'castTime': 2, 'min': 511, 'max': 576, 'hotTick': 546/7, 'duration': 21 },
+    { 'rank': 7, 'mana': 405, 'level': 48, 'castTime': 2, 'min': 646, 'max': 725, 'hotTick': 686/7, 'duration': 21 },
+    { 'rank': 8, 'mana': 485, 'level': 54, 'castTime': 2, 'min': 809, 'max': 906, 'hotTick': 861/7, 'duration': 21 },
+    { 'rank': 9, 'mana': 575, 'level': 60, 'castTime': 2, 'min': 1003, 'max': 1120, 'hotTick': 1064/7, 'duration': 21 },
+    { 'rank': 10, 'mana': 675, 'level': 65, 'castTime': 2, 'min': 1215, 'max': 1356, 'hotTick': 1274/7, 'duration': 21 },
   ],
 };
 
@@ -45,6 +46,7 @@ export const rejuvenation = {
   description: 'Heals the target over 12 sec.',
   direct: false,
   hot: true,
+  hotCoefficient: .2,
   ranks: [
     { 'rank': 1, 'mana': 25, 'level': 4, 'castTime': 1.5, 'hotTick': 32/4, 'duration': 12 },
     { 'rank': 2, 'mana': 40, 'level': 10, 'castTime': 1.5, 'hotTick': 56/4, 'duration': 12 },
@@ -57,6 +59,18 @@ export const rejuvenation = {
     { 'rank': 9, 'mana': 280, 'level': 52, 'castTime': 1.5, 'hotTick': 608/4, 'duration': 12 },
     { 'rank': 10, 'mana': 335, 'level': 58, 'castTime': 1.5, 'hotTick': 756/4, 'duration': 12 },
     { 'rank': 11, 'mana': 360, 'level': 60, 'castTime': 1.5, 'hotTick': 888/4, 'duration': 12 },
+    { 'rank': 12, 'mana': 370, 'level': 63, 'castTime': 1.5, 'hotTick': 932/4, 'duration': 12 },
+    { 'rank': 13, 'mana': 415, 'level': 69, 'castTime': 1.5, 'hotTick': 1060/4, 'duration': 12 },
+  ],
+};
+
+export const lifebloom = {
+  name: 'Lifebloom',
+  description: 'Heals the target for 273 over 7 sec. When Lifebloom completes its duration or is dispelled, the target instantly heals themself for 600. This effect can stack up to 600 times on the same target.',
+  direct: true,
+  hot: true,
+  ranks: [
+    { 'rank': 1, 'mana': 220, 'level': 64, 'castTime': 1.5, 'hotTick': 273/7, 'duration': 7 },
   ],
 };
 

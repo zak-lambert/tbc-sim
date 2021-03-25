@@ -121,30 +121,30 @@ const healingView = ({
                 <td className='text-right'>{rank.castTime}</td>
                 <td className='text-right'>
                   {spell.direct &&
-                    <span>{rank.base}</span>
+                    <span>{Math.round(rank.base)}</span>
                   }
                   {spell.hot &&
                     <span>
                       {spell.direct && <span>+</span>}
-                      <span>{ rank.hot }</span>
+                      <span>{ Math.round(rank.hot) }</span>
                     </span>
                   }
                 </td>
                 <td className='text-right'>
                   {spell.direct &&
-                    <span>{rank.bonus}</span>
+                    <span>{Math.round(rank.bonus)}</span>
                   }
                   {spell.hot &&
                     <span>
                       {spell.direct && <span>+</span>}
-                      <span>{ rank.bonusHot }</span>
+                      <span>{ Math.round(rank.bonusHot) }</span>
                     </span>
                   }
                 </td>
                 <td className='text-right'>{rank.crit}</td>
                 <td className='text-right'>{rank.total}</td>
                 {spell.hot &&
-                  <td className='text-right'>{rank.hotTick}</td>
+                  <td className='text-right'>{Math.round(rank.hotTick)}</td>
                 }
                 <td className='text-right'>{rank.hps}</td>
                 <td className='text-right'>{rank.efficiency}</td>

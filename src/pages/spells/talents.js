@@ -16,14 +16,22 @@ export const improvedRegrowth = {
   effect: ({ character }) => { character.crit = Math.min(100, (+character.crit + 50)); },
 };
 
+export const naturalPerfection = {
+  field: 'naturalPerfection',
+  name: 'Natural Perfection',
+  description: 'Your crit chance with all spells is increased by 3%.',
+  effect: ({ character }) => { character.crit = Math.min(100, (+character.crit + 3)); },
+};
+
 export const giftOfNature = {
   field: 'giftOfNature',
   name: 'Gift of Nature',
   description: 'Increases the effect of all healing spells by 10%.',
-  effect: ({ modifiedRank, rank }) => {
+  effect: ({ modifiedRank, rank, spell }) => {
     modifiedRank.min += rank.min * 0.1;
     modifiedRank.max += rank.max * 0.1;;
     modifiedRank.hotTick += rank.hotTick * 0.1;;
+    spell.coefficient = 100;
   },
 };
 
@@ -52,7 +60,15 @@ export const improvedRejuvenation = {
   field: 'improvedRejuvenation',
   name: 'Improved Rejuvenation',
   description: 'Increases the effect of your Rejuvenation spell by 15%.',
-  effect: ({ modifiedRank, rank }) => { modifiedRank.hotTick += rank.hotTick * 0.15; },
+  effect: ({ modifiedRank, rank}) => { modifiedRank.hotTick += rank.hotTick * 0.15;  },
+};
+
+export const empoweredRejuvenation = {
+  field: 'empoweredRejuvenation',
+  name: 'Empowered Rejuvenation',
+  description: 'The bonus healing of your HoT spells is increased by 20%.',
+  // effect: ({ character }) => { character.healing *= 1.2; },
+  effect: ({ modifiedSpell }) => { modifiedSpell.hotCoefficient = 55; },
 };
 
 export const improvedHealingTouch = {
@@ -60,6 +76,13 @@ export const improvedHealingTouch = {
   name: 'Improved Healing Touch',
   description: 'Reduces the cast time of your Healing Touch spell by 0.5 sec.',
   effect: ({ modifiedRank }) => { modifiedRank.castTime -= 0.5; },
+};
+
+export const empoweredTouch = {
+  field: 'empoweredTouch',
+  name: 'Empowered Touch',
+  description: 'Your Healing Touch spell gains an additional 10% of your bonus healing',
+  effect: ({ character }) => { character.healing *= 1.1; },
 };
 
 export const t2Druid8set = {
@@ -83,11 +106,36 @@ export const t3Druid8set = {
   effect: ({ modifiedRank, character, rank }) => { modifiedRank.mana -= ((character.crit / 100) * rank.mana * 0.3); },
 };
 
+export const treeOfLifeForm = {
+  field: 'treeOfLifeForm',
+  name: 'Tree Of Life Form',
+  description: 'You can only cast Swiftmend, Innervate, Natures Swiftness, Rebirth, Barkskin, poison removing and healing over time spells, but the mana cost of these spells is reduced by 20%. ',
+  effect: ({ modifiedRank, rank}) => { modifiedRank.mana -= rank.mana * 0.2; },
+  // effect: ({ character }) => { character.healing *= .25*character.spirit; },
+};
+
+export const treeOfLifeAura = {
+  field: 'treeOfLifeAura',
+  name: 'Tree Of Life Aura',
+  description: 'While in this form you increase healing received by 25% of your total Spirit for all party members within 45 yards',
+  effect: ({ character }) => { character.healing += character.spirit*.25 },
+  // effect: ({ character }) => { character.healing *= .25*character.spirit; },
+};
+
 export const idolOfHealth = {
   field: 'idolOfHealth',
   name: 'Idol of Health',
-  description: 'Reduces the casting time of your Healing Touch spell by 0.15 sec.',
-  effect: ({ modifiedRank }) => { modifiedRank.castTime -= 0.15; },
+  description: 'Increase the amount healed by Healing Touch by 100',
+  effect: ({ modifiedRank, rank }) => {
+    modifiedRank.min += rank.min + 100;
+    modifiedRank.max += rank.max + 100; },
+};
+
+export const idolOfTheEmeraldQueen = {
+  field: 'idolOfTheEmeraldQueen',
+  name: 'Idol Of The Emerald Queen',
+  description: 'Increase the periodic healing of your Lifebloom by up to 88',
+  effect: ({ modifiedRank}) => { modifiedRank.hotTick += 88; },
 };
 
 export const idolOfLongevity = {
