@@ -45,7 +45,6 @@ class HealingContainer extends Component {
     const hotCoefficient = spell.hotCoefficient ? (spell.hotCoefficient * lowLevelPenalty) : Math.min(((modifiedRank.duration || 15) / 15), 1) * lowLevelPenalty;
 
     const totalCrit = Math.min(+modifiedCharacter.crit, 100);
-    const totalSpirit = Math.min(+modifiedCharacter.spirit, 1000);
 
     const mana = modifiedRank.mana;
     const castTime = Math.max(modifiedRank.castTime, 1.5);
