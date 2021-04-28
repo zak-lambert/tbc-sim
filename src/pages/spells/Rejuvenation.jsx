@@ -11,15 +11,15 @@ class rejuvenation extends Component {
 
   componentWillMount() {
     this.props.initialize({
-      healing: 1000,
+      healing: 1117,
       crit: 10,
       spirit: 284,
       improvedRejuvenation: true,
       empoweredRejuvenation: true,
-      tranquilSpirit: false,
+      tranquilSpirit: true,
       giftOfNature: true,
-      treeOfLifeForm: false,
-      treeOfLifeAura: false,
+      treeOfLifeForm: true,
+      treeOfLifeAura: true,
     });
   }
 
@@ -28,7 +28,6 @@ class rejuvenation extends Component {
       <HealingContainer
         spell={ spells.rejuvenation }
         talents={ [
-          talents.testCo,
           talents.improvedRejuvenation,
           talents.giftOfNature,
           talents.moonglow,

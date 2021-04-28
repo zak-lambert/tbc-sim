@@ -22,7 +22,11 @@
   },
   "repository": {
     "type": "git",
+<<<<<<< HEAD
     "url": "git+https://zak-lambert.github.io/tbc-sim.git"
+=======
+    "url": "https://github.com/zak-lambert/tbc-sim.git"
+>>>>>>> parent of ee6314d (reupload)
   },
   "author": "Zak",
   "homepage": "https://zak-lambert.github.io/tbc-sim/",
@@ -41,7 +45,7 @@
       "last 1 safari version"
     ]
   },
-  "description": "This is a simple set off tools used to calculate healing metrics in a visually meaningful way for the game \"TBC World of Warcraft\".",
+  "description": "Thadadisf is a simple set off tools used to calculate healing and damage metrics in a visually meaningful way for the game \"Classic World Fof Warcraft\".",
   "bugs": {
     "url": "https://github.com/zak-lambert/tbc-sim/issues"
   },

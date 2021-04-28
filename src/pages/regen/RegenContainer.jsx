@@ -11,7 +11,7 @@ class RegenContainer extends Component {
       class: 'druid',
       intellect: 200,
       spirit: 200,
-      combatManaRegen: 30,
+      combatManaRegen: 15,
     });
   }
 
@@ -29,8 +29,6 @@ class RegenContainer extends Component {
         formula = (intellect, spirit) => 13 + (spirit / 4);
         break;
       case 'druid':
-        formula = (intellect, spirit) => (5 * 0.00932715221261 * Math.sqrt(intellect) * spirit);
-        break;
       case 'shaman':
       case 'paladin':
       case 'hunter':
@@ -45,13 +43,11 @@ class RegenContainer extends Component {
     }
 
     const manaPerTick = formula(intellect, spirit);
-    const outOfCombat = manaPerTick * 1;
-    const innervate = 20 * (5-combatManaRegen*.01) * 0.00932715221261 * Math.sqrt(intellect) * spirit
+    const outOfCombat = manaPerTick * 2.5;
 
     return {
       outOfCombat: (outOfCombat).toFixed(2),
       inCombat: (outOfCombat * (combatManaRegen / 100)).toFixed(2),
-      innervate: (innervate).toFixed(2),
     };
   }
 

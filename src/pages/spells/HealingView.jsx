@@ -110,7 +110,6 @@ const healingView = ({
                 <th width='8%' className='text-right'> Tick </th>
               }
               <th width='12%' className='text-right'> HPS </th>
-              <th width='12%' className='text-right'> MP5 </th>
               <th width='12%' className='text-right'> Efficiency </th>
             </tr>
           </thead>
@@ -148,7 +147,6 @@ const healingView = ({
                   <td className='text-right'>{Math.round(rank.hotTick)}</td>
                 }
                 <td className='text-right'>{rank.hps}</td>
-                <td className='text-right'>{rank.mp5}</td>
                 <td className='text-right'>{rank.efficiency}</td>
               </tr>
             ))}
