@@ -22,10 +22,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://zak-lambert.github.io/tbc-sim-master/"
+    "url": "git+https://zak-lambert.github.io/tbc-sim/"
   },
   "author": "Zak",
-  "homepage": "https://zak-lambert.github.io/tbc-sim-master/",
+  "homepage": "https://zak-lambert.github.io/tbc-sim/",
   "devDependencies": {
     "gh-pages": "^2.2.0"
   },
@@ -43,7 +43,7 @@
   },
   "description": "This is a simple set off tools used to calculate healing metrics in a visually meaningful way for the game \"TBC World of Warcraft\".",
   "bugs": {
-    "url": "https://github.com/zak-lambert/tbc-sim-master/issues"
+    "url": "https://github.com/zak-lambert/tbc-sim/issues"
   },
   "main": "index.js",
   "keywords": [],
