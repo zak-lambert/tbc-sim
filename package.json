@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://zak-lambert.github.io/tbc-sim/"
+    "url": "git+https://zak-lambert.github.io/tbc-sim.git"
   },
   "author": "Zak",
   "homepage": "https://zak-lambert.github.io/tbc-sim/",
