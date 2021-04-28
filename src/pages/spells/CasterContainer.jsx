@@ -56,7 +56,7 @@ class CasterContainer extends Component {
     const totalAverage = (totalDirect + totalDot);
     const manaEfficiency = totalAverage / mana;
     const damagePerSecond = totalAverage / castTime;
-    const manaPerSecond = mana * (1 / castTime);
+    const manaPerSecond =  (1 / 1 * 59);
     const rating = ((damagePerSecond / 10) + (manaEfficiency * 10)) * 20;
 
     return {

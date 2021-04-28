@@ -11,7 +11,7 @@ class healingTouch extends Component {
 
   componentWillMount() {
     this.props.initialize({
-      healing: 500,
+      healing: 1000,
       crit: 15,
       improvedHealingTouch: true,
       tranquilSpirit: true,
@@ -30,6 +30,9 @@ class healingTouch extends Component {
           talents.tranquilSpirit,
           talents.moonglow,
           talents.naturesGrace,
+          talents.naturalPerfection,
+          // talents.treeOfLifeAura,
+          talents.treeOfLifeForm,
           talents.amplifyMagic,
           talents.t3Druid4set,
           talents.t3Druid8set,

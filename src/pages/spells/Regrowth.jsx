@@ -11,7 +11,7 @@ class regrowth extends Component {
 
   componentWillMount() {
     this.props.initialize({
-      healing: 500,
+      healing: 1000,
       crit: 15,
       improvedRegrowth: true,
       tranquilSpirit: true,
@@ -25,11 +25,16 @@ class regrowth extends Component {
         spell={ spells.regrowth }
         talents={ [
           talents.improvedRegrowth,
+          talents.empoweredRejuvenation,
           talents.giftOfNature,
           talents.moonglow,
           talents.naturesGrace,
           talents.amplifyMagic,
           talents.t3Druid4set,
+          // talents.treeOfLifeAura,
+          talents.treeOfLifeForm,
+          talents.naturalPerfection,
+          talents.t2Druid5set,
         ] }
         formValues={ this.props.formValues }
       />

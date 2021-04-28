@@ -18,10 +18,14 @@ export default class About extends Component {
         </div>
         <div className='row columns'>
           <p>
-            Legacy Sim is a theorycrafting combat simulation tool for vanilla WoW.
+            Legacy Sim is a theorycrafting combat simulation tool for TBC WoW.
+            Originally created by Tegas for Classic.
           </p>
           <p>
             <a href='https://github.com/zak-lambert/tbc-sim'>Github</a>
+          </p>
+          <p>
+            <a href='https://github.com/Tegas/legacy-sim'>Tegas Github</a>
           </p>
         </div>
       </div>
