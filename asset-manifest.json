@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/tbc-sim/static/css/main.eec15846.chunk.css",
-    "main.js": "/tbc-sim/static/js/main.e7b19507.chunk.js",
-    "main.js.map": "/tbc-sim/static/js/main.e7b19507.chunk.js.map",
+    "main.css": "/tbc-sim/static/css/main.1cd6dc54.chunk.css",
+    "main.js": "/tbc-sim/static/js/main.e08a0737.chunk.js",
+    "main.js.map": "/tbc-sim/static/js/main.e08a0737.chunk.js.map",
     "runtime~main.js": "/tbc-sim/static/js/runtime~main.0677849a.js",
     "runtime~main.js.map": "/tbc-sim/static/js/runtime~main.0677849a.js.map",
-    "static/js/2.5b8f5605.chunk.js": "/tbc-sim/static/js/2.5b8f5605.chunk.js",
-    "static/js/2.5b8f5605.chunk.js.map": "/tbc-sim/static/js/2.5b8f5605.chunk.js.map",
+    "static/js/2.de29ccfc.chunk.js": "/tbc-sim/static/js/2.de29ccfc.chunk.js",
+    "static/js/2.de29ccfc.chunk.js.map": "/tbc-sim/static/js/2.de29ccfc.chunk.js.map",
     "index.html": "/tbc-sim/index.html",
-    "precache-manifest.f414546b458f4cdd66abeecbd6f4c5ee.js": "/tbc-sim/precache-manifest.f414546b458f4cdd66abeecbd6f4c5ee.js",
+    "precache-manifest.7adf9d630e449b437695e978f90838e1.js": "/tbc-sim/precache-manifest.7adf9d630e449b437695e978f90838e1.js",
     "service-worker.js": "/tbc-sim/service-worker.js",
-    "static/css/main.eec15846.chunk.css.map": "/tbc-sim/static/css/main.eec15846.chunk.css.map"
+    "static/css/main.1cd6dc54.chunk.css.map": "/tbc-sim/static/css/main.1cd6dc54.chunk.css.map"
   }
 }
