@@ -62,7 +62,7 @@ export const giftOfNature = {
     modifiedRank.min += rank.min * 0.1;
     modifiedRank.max += rank.max * 0.1;
     modifiedRank.hotTick += rank.hotTick * 0.1;
-    // modifiedSpell.hotCoefficient += spell.hotCoefficient * .1
+    modifiedSpell.hotCoefficient += spell.hotCoefficient * .1
 
     modifiedSpell.coefficient += modifiedSpell.coefficient * .1
     // if( spell.name === "Regrowth"){
@@ -70,7 +70,7 @@ export const giftOfNature = {
     //   modifiedSpell.bonusHotCo *= 1.1;
     // }
     // else{
-    modifiedSpell.bonusHotCo *= 1.1; //+= .1
+    // modifiedSpell.bonusHotCo *= 1.1; //+= .1
     //   // modifiedSpell.bonusDirect = modifiedSpell.bonusDirect *1.1
     // }
   },
