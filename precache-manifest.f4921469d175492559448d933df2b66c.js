@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f637526ec531a6e163bcaa7b7b8e2dc2",
+    "revision": "a24f377ad4c82cf0f68142e4092fba95",
     "url": "/tbc-sim/index.html"
   },
   {
-    "revision": "2de7dfe1414800eeb2d3",
+    "revision": "1961d4c4d0e6b56cc7fc",
     "url": "/tbc-sim/static/css/main.1cd6dc54.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tbc-sim/static/js/2.070cdcce.chunk.js"
   },
   {
-    "revision": "2de7dfe1414800eeb2d3",
-    "url": "/tbc-sim/static/js/main.9a5ee784.chunk.js"
+    "revision": "1961d4c4d0e6b56cc7fc",
+    "url": "/tbc-sim/static/js/main.d233875e.chunk.js"
   },
   {
     "revision": "a1b543e8e9d7817a7553",
