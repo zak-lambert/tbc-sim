@@ -64,7 +64,10 @@ class HealingContainer extends Component {
     const totalDirect = (baseAverage + bonusHeal + averageCritBonus);
     const totalAverage = (totalDirect + totalHot);
     const manaEfficiency = totalAverage / mana;
-    const healingPerSecond = totalAverage / castTime;
+    
+    const healingPerSecond = spell.name === "Lifebloom" ? hotTick+baseAverage : (totalAverage / castTime);
+    console.log("FSLSDKFJS:DLKF:SDFLK" + spell.name)
+
     const manaPerSecond = 5 * mana * (1 / castTime);
     const rating = ((healingPerSecond / 10) + (manaEfficiency * 10)) * 20;
 

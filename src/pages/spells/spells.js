@@ -28,6 +28,7 @@ export const healingTouch = {
   description: 'Heals a friendly target',
   direct: true,
   hot: false,
+  coefficient: 1,
   bonusDirect: 1,
   bonusHotCo: 1,
   ranks: [
