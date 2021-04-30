@@ -11,16 +11,18 @@ class lifebloom extends Component {
 
   componentWillMount() {
     this.props.initialize({
-      healing: 1500,
+      healing: 1000,
       crit: 10,
       int: 500,
       spirit: 500,
-      improvedRejuvenation: true,
-      tranquilSpirit: true,
+      bloomTest: true,
+      bloomTest2: false,
+      // improvedRejuvenation: true,
+      // tranquilSpirit: true,
       giftOfNature: true,
-      empoweredRejuvenation: true,
-      treeOfLifeForm: true,
-      treeOfLifeAura: true,
+      // empoweredRejuvenation: true,
+      // treeOfLifeForm: true,
+      // treeOfLifeAura: true,
     });
   }
 
@@ -29,16 +31,23 @@ class lifebloom extends Component {
       <HealingContainer
         spell={ spells.lifebloom }
         talents={ [
-          talents.improvedRejuvenation,
+          // talents.bloomTest,
+          // talents.bloomTest2,
+          // talents.improvedRejuvenation,
           talents.giftOfNature,
           talents.treeOfLifeForm,
-          talents.treeOfLifeAura,
+          // talents.treeOfLifeAura,
           talents.moonglow,
           talents.amplifyMagic,
-          talents.t2Druid8set,
+          // talents.t2Druid8set,
           talents.t3Druid4set,
           talents.idolOfTheEmeraldQueen,
           talents.empoweredRejuvenation,
+          talents.bloomTest,
+          talents.bloomTest2,
+        ] }talentsH={ [
+          // talents.bloomTest,
+          // talents.bloomTest2,
         ] }
         formValues={ this.props.formValues }
       />

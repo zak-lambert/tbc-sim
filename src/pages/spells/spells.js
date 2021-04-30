@@ -5,8 +5,10 @@ export const regrowth = {
   direct: true,
   hot: true,
   // Coefficients https://github.com/elysium-project/server/pull/860
-  coefficient: 0.3,
-  hotCoefficient: 0.5,
+  coefficient: 0.289,
+  hotCoefficient: 0.7,
+  bonusDirect: 1,
+  bonusHotCo: 1,
   ranks: [
     { 'rank': 1, 'mana': 120, 'level': 12, 'castTime': 2, 'min': 92, 'max': 107, 'hotTick': 98/7, 'duration': 21 },
     { 'rank': 2, 'mana': 205, 'level': 18, 'castTime': 2, 'min': 176, 'max': 201, 'hotTick': 175/7, 'duration': 21 },
@@ -26,6 +28,8 @@ export const healingTouch = {
   description: 'Heals a friendly target',
   direct: true,
   hot: false,
+  bonusDirect: 1,
+  bonusHotCo: 1,
   ranks: [
     { 'rank': '1', 'mana': 25, 'level': 1, 'castTime': 1.5, 'min': 40, 'max': 55, 'hotTick': 0 },
     { 'rank': '2', 'mana': 55, 'level': 8, 'castTime': 2, 'min': 94, 'max': 119, 'hotTick': 0 },
@@ -37,7 +41,9 @@ export const healingTouch = {
     { 'rank': '8', 'mana': 495, 'level': 44, 'castTime': 3.5, 'min': 1224, 'max': 1453, 'hotTick': 0 },
     { 'rank': '9', 'mana': 600, 'level': 50, 'castTime': 3.5, 'min': 1545, 'max': 1826, 'hotTick': 0 },
     { 'rank': '10', 'mana': 720, 'level': 56, 'castTime': 3.5, 'min': 1916, 'max': 2257, 'hotTick': 0 },
-    { 'rank': '11', 'mana': 800, 'level': 56, 'castTime': 3.5, 'min': 2266, 'max': 2677, 'hotTick': 0 },
+    { 'rank': '11', 'mana': 800, 'level': 60, 'castTime': 3.5, 'min': 2266, 'max': 2677, 'hotTick': 0 },
+    { 'rank': '12', 'mana': 820, 'level': 62, 'castTime': 3.5, 'min': 2401, 'max': 2827, 'hotTick': 0 },
+    { 'rank': '13', 'mana': 935, 'level': 69, 'castTime': 3.5, 'min': 2715, 'max': 3206, 'hotTick': 0 },
   ],
 };
 
@@ -46,7 +52,9 @@ export const rejuvenation = {
   description: 'Heals the target over 12 sec.',
   direct: false,
   hot: true,
-  hotCoefficient: .2,
+  hotCoefficient: .8,
+  bonusDirect: 1,
+  bonusHotCo: 1,
   ranks: [
     { 'rank': 1, 'mana': 25, 'level': 4, 'castTime': 1.5, 'hotTick': 32/4, 'duration': 12 },
     { 'rank': 2, 'mana': 40, 'level': 10, 'castTime': 1.5, 'hotTick': 56/4, 'duration': 12 },
@@ -69,10 +77,33 @@ export const lifebloom = {
   description: 'Heals the target for 273 over 7 sec. When Lifebloom completes its duration or is dispelled, the target instantly heals themself for 600. This effect can stack up to 600 times on the same target.',
   direct: true,
   hot: true,
+  coefficient: 1,
+  hotCoefficient: 1,
+  bonusDirect: .3422,
+  bonusHotCo: .5194,
   ranks: [
-    { 'rank': 1, 'mana': 220, 'level': 64, 'castTime': 1.5, 'hotTick': 273/7, 'duration': 7 },
+    { 'rank': 1, 'mana': 220, 'level': 64, 'castTime': 1.5, 'min': 600, 'max': 600, 'hotTick': 39, 'duration': 21 },
+    { 'rank': 2, 'mana': 220, 'level': 64, 'castTime': 1.5, 'min': 600, 'max': 600, 'hotTick': 39, 'duration': 21 },
+    { 'rank': 3, 'mana': 220, 'level': 64, 'castTime': 1.5, 'min': 600, 'max': 600, 'hotTick': 39, 'duration': 21 },
   ],
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export const flashHeal = {
   name: 'Flash Heal',

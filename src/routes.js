@@ -20,7 +20,7 @@ import PrayerOfHealing from './pages/spells/PrayerOfHealing';
 import LesserHealingWave from './pages/spells/LesserHealingWave';
 import HealingWave from './pages/spells/HealingWave';
 import ChainHeal from './pages/spells/ChainHeal';
-import ShadowBolt from './pages/spells/ShadowBolt';
+// import ShadowBolt from './pages/spells/ShadowBolt';
 import NotFoundPage from './pages/not-found/NotFoundPage';
 import ResistancesContainer from './pages/resistances/ResistancesContainer';
 import ArmorContainer from './pages/armor/ArmorContainer';
@@ -62,7 +62,7 @@ class Routes extends Component {
                 <Route path="/lesser-healing-wave" component={ LesserHealingWave } />
                 <Route path="/healing-wave" component={ HealingWave } />
                 <Route path="/chain-heal" component={ ChainHeal } />
-                <Route path="/shadow-bolt" component={ ShadowBolt } />
+                {/* <Route path="/shadow-bolt" component={ ShadowBolt } /> */}
 
                 <Route exact path="/about" component={ AboutPage } />
                 <Route path='*' component={ NotFoundPage } />

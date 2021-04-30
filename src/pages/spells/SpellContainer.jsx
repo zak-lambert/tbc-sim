@@ -21,7 +21,7 @@ export default class SpellContainer extends Component {
           </nav>
         </div>
         <div className='column row'>
-          <h1>Spells</h1>
+          {/* <h1>Spells</h1> */}
           <div>
             <h2>Druid</h2>
             <p><NavLink exact to="/healing-touch" >Healing Touch</NavLink></p>
@@ -29,7 +29,7 @@ export default class SpellContainer extends Component {
             <p><NavLink exact to="/regrowth" >Regrowth</NavLink></p>
             <p><NavLink exact to="/lifebloom" >Lifebloom</NavLink></p>
           </div>
-          <div>
+          {/* <div>
             <h2>Paladin</h2>
             <p><NavLink exact to="flash-of-light" >Flash Of Light</NavLink></p>
             <p><NavLink exact to="holy-light" >Holy Light</NavLink></p>
@@ -52,7 +52,7 @@ export default class SpellContainer extends Component {
           <div>
             <h2>Warlock</h2>
             <p><NavLink exact to="/shadow-bolt">Shadow Bolt</NavLink></p>
-          </div>
+          </div> */}
         </div>
       </div>
     );

@@ -14,6 +14,7 @@ class HealingContainer extends Component {
     const modifiedTarget = Object.assign({}, target);
 
     _.forOwn(talents, (value) => {
+      
       if (character[value.field]) {
         value.effect({
           spell,
@@ -40,9 +41,9 @@ class HealingContainer extends Component {
   computeSpellDetails({ modifiedSpell, modifiedRank, modifiedCharacter, target, spell, rank }) {
 
     const lowLevelPenalty = (1 - ((20 - Math.min(rank.level, 20)) * 0.0375));
-    const coefficient = (Math.min(rank.castTime, 3.5) / 3.5) * lowLevelPenalty;
-    const directCoefficient = spell.coefficient ? (spell.coefficient * lowLevelPenalty) : coefficient;
-    const hotCoefficient = spell.hotCoefficient ? (spell.hotCoefficient * lowLevelPenalty) : Math.min(((modifiedRank.duration || 15) / 15), 1) * lowLevelPenalty;
+    const coefficient = ((Math.min(rank.castTime, 3.5) / 3.5) * lowLevelPenalty);
+    const directCoefficient = spell.coefficient ? (modifiedSpell.coefficient * modifiedSpell.bonusDirect * lowLevelPenalty) : coefficient * modifiedSpell.bonusDirect;
+    const hotCoefficient = spell.hotCoefficient ? (modifiedSpell.hotCoefficient * modifiedSpell.bonusHotCo * lowLevelPenalty) : Math.min(((modifiedRank.duration || 15) / 15), 1) * lowLevelPenalty * modifiedSpell.bonusHotCo;
 
     const totalCrit = Math.min(+modifiedCharacter.crit, 100);
 
@@ -51,8 +52,8 @@ class HealingContainer extends Component {
     const numberOfTicks = modifiedRank.duration / 3.0;
     const modifiedNumberOfTicks = modifiedRank.duration / 3.0;
     const bonusHot = modifiedSpell.hot ? hotCoefficient * +modifiedCharacter.healing : 0.0;
-    const baseHotTick  = Math.floor(modifiedRank.hotTick || 0);
-    const bonusHotTick = Math.floor(bonusHot / numberOfTicks);
+    const baseHotTick  = (modifiedRank.hotTick || 0);
+    const bonusHotTick = (bonusHot / numberOfTicks);
     const totalBaseHot = baseHotTick * modifiedNumberOfTicks;
     const totalBonusHot = bonusHotTick * modifiedNumberOfTicks;
     const totalHot = totalBaseHot + totalBonusHot || 0.0;
@@ -64,14 +65,14 @@ class HealingContainer extends Component {
     const totalAverage = (totalDirect + totalHot);
     const manaEfficiency = totalAverage / mana;
     const healingPerSecond = totalAverage / castTime;
-    const manaPerSecond = mana * (1 / castTime);
+    const manaPerSecond = 5 * mana * (1 / castTime);
     const rating = ((healingPerSecond / 10) + (manaEfficiency * 10)) * 20;
 
     return {
       rank: rank.rank,
       rankDescription: `Rank ${ rank.rank }`,
       mana: mana.toFixed(2),
-      mps: manaPerSecond.toFixed(2),
+      mp5: manaPerSecond.toFixed(2),
       castTime,
       base: baseAverage.toFixed(2),
       hot: totalBaseHot,
