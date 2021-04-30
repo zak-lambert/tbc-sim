@@ -9,29 +9,27 @@ export const amplifyMagic = {
   },
 };
 
-export const lifebloomStacks = {
-  field: 'lifebloomStacks',
-  name: 'Lifebloom Stacks (leave on)',
-  description: 'Temp fix to show lifebloom stacks.',
+export const bloomTest = {
+  field: 'bloomTest',
+  name: 'bloomTest',
+  description: 'bloomtest',
   effect: ({ rank, modifiedRank, modifiedSpell }) => {
     if (rank.rank === 2){
       modifiedRank.hotTick *=2;
-      modifiedRank.hotTick -=.1;
       modifiedSpell.bonusHotCo *=2;
     }
     if (rank.rank === 3){
       modifiedRank.hotTick *= 3.0;
-      modifiedRank.hotTick -=.1;
       modifiedSpell.bonusHotCo *=3;
     }
   },
 };
 
 
-export const lifebloomHoT = {
-  field: 'lifebloomHoT',
-  name: 'Lifebloom HoT Only',
-  description: 'Shows only the HoT portion of LB',
+export const bloomTest2 = {
+  field: 'bloomTest2',
+  name: 'bloomTes2',
+  description: 'bloomtest2',
   effect: ({ rank, spell, modifiedRank, modifiedSpell }) => {
     modifiedSpell.direct = false;
     modifiedRank.min =0;
@@ -197,7 +195,7 @@ export const idolOfTheEmeraldQueen = {
   field: 'idolOfTheEmeraldQueen',
   name: 'Idol Of The Emerald Queen',
   description: 'Increase the periodic healing of your Lifebloom by up to 88',
-  effect: ({ modifiedRank}) => { modifiedRank.hotTick += 12.57; },
+  effect: ({ modifiedRank}) => { modifiedRank.hotTick += 88; },
 };
 
 export const idolOfLongevity = {
