@@ -11,7 +11,7 @@ class regrowth extends Component {
 
   componentWillMount() {
     this.props.initialize({
-      healing: 1000,
+      healing: 1500,
       crit: 15,
       spirit: 400,
       improvedRegrowth: true,
